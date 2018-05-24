@@ -1,0 +1,38 @@
+<!--
+  Generated template for the ChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Chat System</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div id="commentpart">
+    <div *ngFor="let comment of comments">
+        <div class="username">{{comment.username}}</div>
+        <div class="comment">{{comment.comment}}</div>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-11 class="text"><ion-input input="text" [(ngModel)]="comment"></ion-input></ion-col>
+        <ion-col col-1 class="sendbutton"><button ion-button full icon-only (click)="chatlog()"><ion-icon ios="ios-send" md="md-send"></ion-icon> </button></ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-footer>

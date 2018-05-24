@@ -1,0 +1,149 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-searchbar padding-right (ionInput) = "getTopics($event)" placeholder ="Search states"></ion-searchbar>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+  <!-- This is for camera(not working, paul haliday youtube)
+    <button ion-button (click) = "takePhoto()">Take Photos</button>-->
+<!-- Testing start -->
+<!-- <ion-list>
+  <ion-item *ngFor = "let topic of arrLocationNames">
+    {{topic}}
+  </ion-item>
+</ion-list> -->
+
+
+<!-- Testing end -->
+  <h2 padding>Discover your trip on Tripper's Partner!</h2>
+
+  <ion-card *ngFor="let post of finaluserPostsLists" (click)="redirectPage(post)">
+  <ion-item color="primary">
+    <ion-avatar item-left>
+        <img src="assets/imgs/sksurain.jpg"/>
+      </ion-avatar>
+      <h2> {{post.tourismHostName}}</h2>
+      <p> 13-Dec-17</p>
+      <label style="font-size: 20px; color:limegreen;font-weight:bold;" item-end>{{post.tourismPrice}}/person</label>
+    </ion-item>
+      <img src="assets/imgs/mangrove.jpg"/>
+    <ion-card-content>
+        <ion-card-title>
+            {{post.tourismName}}             
+        </ion-card-title>
+        <p style="text-align:justify;">{{post.tourismDescription}}</p>
+    <ion-row class="row">
+        <ion-col col-6>
+                <ion-icon name='pin' item-start class="iconEdit"></ion-icon>
+                <label class="fontEdit">Location</label>
+                <ion-badge item-end>{{post.tourismLocation}}</ion-badge>
+          </ion-col>
+      <ion-col>
+              <ion-icon name='stats' item-start class="iconEdit"></ion-icon>
+              <label class="fontEdit">Rate</label>
+              <ion-badge item-end>5 star(30)</ion-badge>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row">
+        <ion-col col-6>
+            <ion-icon name='globe' item-start class="iconEdit"></ion-icon>
+            <label class="fontEdit">Language</label>
+            <ion-badge item-end>{{post.tourismLanguage}}</ion-badge>
+          </ion-col>
+      <ion-col>
+          <ion-icon name='bonfire' item-start class="iconEdit"></ion-icon>
+          <label class="fontEdit">Type</label>
+          <ion-badge item-end>{{post.tourismType}}</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+
+
+
+<!-- <ion-card (click)="redirectPage()">
+  <ion-item color="primary">
+    <ion-avatar item-left>
+        <img src="assets/imgs/sksurain.jpg"/>
+      </ion-avatar>
+      <h2> James</h2>
+      <p> 11-Dec-17</p>
+      <label style="font-size: 20px; color:limegreen;font-weight:bold;" item-end>RM5/person</label>
+    </ion-item>
+      <img src="assets/imgs/melaka.jpg"/>
+    <ion-card-content>
+        <ion-card-title>
+          Fun filled Mellaca tour!
+          </ion-card-title>
+        <p style="text-align:justify;">Let me walk you through this historic town and guide you with everything it has to offer. Of course we will end the session with free DSLR photo session!</p>
+    <ion-row class="row">
+        <ion-col col-6>
+                <ion-icon name='pin' item-start class="iconEdit"></ion-icon>
+                <label class="fontEdit">Location</label>
+                <ion-badge item-end>Mellaca</ion-badge>
+          </ion-col>
+      <ion-col>
+              <ion-icon name='stats' item-start class="iconEdit"></ion-icon>
+              <label class="fontEdit">Rate</label>
+              <ion-badge item-end>3.5 star(10)</ion-badge>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row">
+        <ion-col col-6>
+            <ion-icon name='globe' item-start class="iconEdit"></ion-icon>
+            <label class="fontEdit">Language</label>
+            <ion-badge item-end>Eng</ion-badge>
+          </ion-col>
+      <ion-col>
+          <ion-icon name='hammer' item-start class="iconEdit"></ion-icon>
+          <label class="fontEdit">Type</label>
+          <ion-badge item-end>History</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card> -->
+
+<!-- This is to display list of tourism services
+<ion-card *ngFor="let post of userPostsLists">
+
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="{{userPhoto}}">
+    </ion-avatar>
+    <h2>{{userDisplayName}}</h2>
+    <p>2pm today</p>
+  </ion-item>
+
+
+  <ion-card-content>
+    <p>{{post.tourismName}}</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+ -->
+</ion-content>

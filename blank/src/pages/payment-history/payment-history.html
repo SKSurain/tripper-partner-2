@@ -1,0 +1,66 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+        <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>Payment History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+<ion-card (click)="redirectPage()">
+  <ion-card-content class="changeColor">
+       <ion-row>
+           <ion-col col-9><label item-start class="fontChange">Borneo Bird Festival</label></ion-col>
+           <ion-col><label item-end class="fontStatusAccept">RM 50</label></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col><label item-start class="fontContent">James Will</label></ion-col>
+            <ion-col><label item-end class="fontContent">11:00,10 Nov 17</label></ion-col>
+        </ion-row>          
+  </ion-card-content>
+</ion-card>
+
+<ion-card (click)="redirectPage()">
+        <ion-card-content class="changeColor">
+             <ion-row>
+                 <ion-col col-9><label item-start class="fontChange">KLCC Exclusive Tour</label></ion-col>
+                 <ion-col><label item-end class="fontStatusReqDel">RM150</label></ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col><label item-start class="fontContent">James Russell</label></ion-col>
+                  <ion-col><label item-end class="fontContent">15:00,15 Sep 17</label></ion-col>
+              </ion-row>          
+        </ion-card-content>
+      </ion-card>
+
+<ion-card (click)="redirectPage()">
+  <ion-card-content class="changeColor">
+       <ion-row>
+           <ion-col col-9><label item-start class="fontChange">Pulau Tioman Snorkeling</label></ion-col>
+           <ion-col><label item-end class="fontStatusDecline">RM230</label></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col><label item-start class="fontContent">Dwayne Johnson</label></ion-col>
+            <ion-col><label item-end class="fontContent">09:30, 23 Jan 17</label></ion-col>
+        </ion-row>          
+  </ion-card-content>
+</ion-card>
+
+<ion-card (click)="redirectPage()">
+  <ion-card-content class="changeColor">
+       <ion-row>
+           <ion-col col-9><label item-start class="fontChange"> Mind blowing rowing</label></ion-col>
+           <ion-col><label item-end class="fontStatusReqDel">Deleted</label></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col><label item-start class="fontContent">James Will</label></ion-col>
+            <ion-col><label item-end class="fontContent">JOH,10 Nov 17</label></ion-col>
+        </ion-row>          
+  </ion-card-content>
+</ion-card>
+</ion-content>

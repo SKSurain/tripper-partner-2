@@ -1,0 +1,55 @@
+
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Profile</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+  <ion-card>
+        <img src="assets/imgs/sksurain.jpg"/>
+      <ion-card-content>
+          <ion-card-title class="middle">
+              {{userItem?.name}}
+            </ion-card-title>
+            <p class="middle">Joined 10 December 2017</p>
+      </ion-card-content>
+      <ion-row>
+          <ion-col>
+              <ion-item>
+                  <ion-icon name='pin' item-start style="color: #d03e84"></ion-icon>
+                  <ion-label item-start>Country</ion-label>
+                  <ion-badge item-end>{{userItem?.country}}</ion-badge>
+                </ion-item>
+            </ion-col>
+        <ion-col>
+            <ion-item>
+                <ion-icon name='mail' item-start style="color: #d03e84"></ion-icon>
+                Email
+                <ion-badge item-end>{{userItem?.email}}</ion-badge>
+              </ion-item>      
+        </ion-col>
+        <ion-col>
+            <ion-item>
+                <ion-icon name='male' item-start style="color: #d03e84"></ion-icon>
+                Gender
+                <ion-badge item-end>{{userItem?.gender}}</ion-badge>
+              </ion-item>
+          </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-icon name='egg' item-start style="color: #d03e84"></ion-icon>
+                    Birthday
+                    <ion-badge item-end>{{userItem?.birthday}}</ion-badge>
+                  </ion-item>
+              </ion-col>
+      </ion-row>
+  </ion-card>
+  <ion-fab right bottom>
+        <button ion-fab color="dark" ><ion-icon name="create" (click)="chatRedirect()" ></ion-icon></button>
+      </ion-fab>
+  </ion-content>
+  

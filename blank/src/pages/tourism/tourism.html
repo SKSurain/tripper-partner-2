@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-navbar>
+     <ion-title>Tripper's Partner</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+  <ion-card >
+        <img src="assets/imgs/mangrove.jpg"/>
+      <ion-card-content>
+          <ion-card-title>
+              {{tourismItem?.tourismName}}
+            </ion-card-title>
+            <p>
+            {{tourismItem?.tourismDescription}} How would you like to experience one of the rarest natural event on earth with family and friends?  
+            </p>
+      </ion-card-content>
+      <ion-row>
+          <ion-col>
+              <ion-item>
+                  <ion-icon name='pricetag' item-start style="color: #d03e84"></ion-icon>
+                  Price
+                  <ion-badge item-end>{{tourismItem?.tourismPrice}}/person</ion-badge>
+                </ion-item>
+            </ion-col>
+        <ion-col>
+            <ion-item>
+                <ion-icon name='stats' item-start style="color: #d03e84"></ion-icon>
+                Rating
+                <ion-badge item-end>5 stars</ion-badge>
+              </ion-item>      
+        </ion-col>
+        <ion-col>
+            <ion-item>
+                <ion-icon name='bonfire' item-start style="color: #d03e84"></ion-icon>
+                Type
+                <ion-badge item-end>{{tourismItem?.tourismType}}</ion-badge>
+              </ion-item>
+          </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-icon name='globe' item-start style="color: #d03e84"></ion-icon>
+                    Language
+                    <ion-badge item-end>{{tourismItem?.tourismLanguage}}</ion-badge>
+                  </ion-item>
+              </ion-col>
+              <ion-col>
+                  <ion-item>
+                      <ion-icon name='pin' item-start style="color: #d03e84"></ion-icon>
+                      Type
+                      <ion-badge item-end>{{tourismItem?.tourismLocation}}</ion-badge>
+                    </ion-item>
+                </ion-col>
+                  <ion-col>
+                      <ion-item>
+                          <ion-icon name='alarm' item-start style="color: #d03e84"></ion-icon>
+                          Language
+                          <ion-badge item-end>{{tourismItem?.tourismDuration}}</ion-badge>
+                        </ion-item>
+                    </ion-col>
+      </ion-row>
+      <h2 padding class="head2">What we'll do?</h2>
+      <p padding class ="par">{{tourismItem?.tourismDescription}} </p>
+      <h2 padding class="head2">What we'll provide?</h2>
+      <p padding class="par">
+        <ion-list>
+        <ion-item>
+            <ion-icon name='checkmark' item-start style="color: #1bc205">
+              </ion-icon>{{tourismItem?.tourismProvideInformation}}</ion-item>
+        <ion-item><ion-icon name='checkmark' item-start style="color: #1bc205">
+          </ion-icon>DSLR photos of your moments</ion-item>
+        <ion-item><ion-icon name='checkmark' item-start style="color: #1bc205">
+          </ion-icon>Beverage and snacks</ion-item>
+      </ion-list>
+      </p>
+      <h2 padding class="head2">Note</h2>
+      <p padding class ="par">Within a week you will receive a download link with your edited photos (high res jpegs) If you'd like to see my style of photography, please don't hesitate to ask for a link to my portfolio.</p>
+      <ion-row>
+        <ion-col>
+          <button ion-button block color="secondary" (click)="redirectPage()">Chat</button>
+        </ion-col>
+          <ion-col>
+
+            <button ion-button block  color="danger" (click)="redirectChat()">Book</button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-content>
+  

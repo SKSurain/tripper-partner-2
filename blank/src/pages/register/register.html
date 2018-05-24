@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Tripper's Partner</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="vertical-center">
+  <ion-list>
+    <ion-item no-lines> <ion-label style="font-size:20px;font-weight:bold;text-align:center;">Register</ion-label></ion-item>
+    <ion-item no-lines><ion-input type="text"  placeholder="Email" #username></ion-input></ion-item>      
+    <ion-item no-lines><ion-input type="password" placeholder="Password" #password></ion-input></ion-item>
+    <ion-item no-lines>
+        <ion-label col-6 class="checkbox">Remember me</ion-label>
+        <ion-checkbox color="dark" checked="true"></ion-checkbox>
+      </ion-item>
+    <ion-item no-lines>
+      <button item-start  ion-button (click) = "registerUser()" color="dark" block>Register</button>
+    </ion-item>
+  </ion-list>
+  </ion-content>
+  

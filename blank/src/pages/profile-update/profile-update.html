@@ -1,0 +1,86 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile Update
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content" padding>
+
+  <!-- <ion-label style="font-size:16px;padding-left:16px;font-weight:bold;">Purchase review</ion-label> -->
+  
+          <ion-avatar item-start class="testing">
+            <img src="assets/imgs/sksurain.jpg" class="profilepicsize">
+          </ion-avatar>
+
+  <ion-list style="padding-top:90px;">
+    <ion-item no-lines style="padding-bottom:20px;padding-right:19px;">
+        <button ion-button icon-only item-end color="dark">
+            <ion-icon name="create"></ion-icon>
+          </button>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input 
+      [(ngModel)] = "userItem.name"
+        type="text" 
+        name= "title"
+        placeholder="Surain R.Sinnasamy"
+        ></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input 
+        [(ngModel)] = "userItem.email"
+        type="text"
+        name = "email"
+        placeholder="surain.wira@gmail.com"></ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)] = "userItem.gender">
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Birthday</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)] = "userItem.birthday"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>State</ion-label>
+          <ion-select [(ngModel)] = "userItem.country">
+              <ion-option>Johor</ion-option>
+              <ion-option>Kuala Lumpur</ion-option>
+              <ion-option>Penang</ion-option>
+              <ion-option>Kedah</ion-option>
+              <ion-option>Melaka</ion-option>
+              <ion-option>Selangor</ion-option>
+            </ion-select>
+        </ion-item>
+
+      <ion-item>
+      <ion-label>About yourself</ion-label>
+      <ion-textarea name ="description" [(ngModel)] = "userItem.description" ></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block  color="secondary" (click) ="addItem(userItem)" class="button">Update</button>
+</ion-content>
+
+<style>
+  ion-list:first-child {
+    margin-top: 32px;
+  }
+
+  ion-list + ion-list {
+    margin-top: 0;
+  }
+</style>
